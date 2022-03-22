@@ -10,7 +10,6 @@ int (*get_print_func(char c))(va_list)
 	struc pri[] = {
 		{"c", print_single},
 		{"s", print_string},
-		{"%", print_single},
 		{"d", print_int},
 		{"i", print_int},
 		{NULL, NULL}
@@ -25,5 +24,5 @@ int (*get_print_func(char c))(va_list)
 			return (pri[i].f);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

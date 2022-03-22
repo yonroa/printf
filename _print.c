@@ -25,18 +25,21 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-		    result = get_print_func(format[i + 1]);
-		    tmp = result(args);
+			if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				sum++;
+			}
+			else
+			{
+				result = get_print_func(format[i + 1]);
+		    		tmp = result(args);
 
-		if (!tmp)
-			printf("ERROR");
-
-		if (format[i + 1] == '%')
-		{
-			_putchar('%');
-		}
-		sum += tmp;
-		i++;
+				if (tmp == 0)
+					printf("ERROR");
+				sum += tmp;
+			}
+			i++;
 		}
 		i++;
 	}
