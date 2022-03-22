@@ -2,27 +2,22 @@
 #include <unistd.h>
 
 /**
- * print_number - Print the number n
- * @n: Number to be prited
- */
-void print_number(int n)
+ * * print_number - prints # using _putchar function
+ * * @n: the integer to print
+ * *
+ * * Return: void
+ * */
+int print_number(char *n)
 {
-	unsigned int u;
+	int i = 0, sum = 0;
 
-	if (n < 0)
+	while (n[i] != '\0')
 	{
-		u = n * -1;
-		_putchar('-');
+		_putchar(n[i]);
+		sum++;
+		i++;
 	}
-	else
-	{
-		u = n;
-	}
-	if (u / 10)
-	{
-		print_number(u / 10);
-	}
-	_putchar((u % 10) + 4);
+	return (sum);
 }
 
 /**
@@ -42,4 +37,11 @@ int print_string(char *str)
 		h++;
 	}
 	return (sum);
+}
+
+int print_single(char *c)
+{
+	char n = c[0];
+
+	return (_putchar(n));
 }

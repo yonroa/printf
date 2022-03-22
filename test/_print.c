@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			str = va_arg(args, char *);
-			result = get_print_func(format [i + 1])(str);
+			result = get_print_func(format[i + 1]);
 			tmp = result(str);
 			sum += tmp;
 			i++;

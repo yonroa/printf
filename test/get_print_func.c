@@ -6,21 +6,22 @@
  * Return: The string printed
  * NULL if the character is not found
  */
-int (*get_print_func(char *c))(char *string)
+int (*get_print_func(char c))(char *)
 {
 	struc pri[] = {
-		{"c", _putchar},
+		{"c", print_single},
 		{"s", print_string},
-		{"%", _putchar},
+		{"%", print_single},
 		{"d", print_number},
 		{"i", print_number},
 		{NULL, NULL}
 	};
 	int i = 0;
+	char *x = &c;
 
 	while (pri[i].formt != NULL)
 	{
-		if (strcmp(pri[i].formt, c) == 0)
+		if (_strcmp(pri[i].formt, x) == 0)
 			return (pri[i].f);
 		i++;
 	}

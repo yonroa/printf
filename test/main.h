@@ -10,11 +10,15 @@
 typedef struct prints
 {
 	char *formt;
-	int (*f)(char c);
+	int (*f)(char *c);
 } struc;
 int _putchar(char c);
 int _printf(const char *format, ...);
-void print_number(int n);
-int (*get_print_func(char *c))(char *string);
+int print_number(char *n);
+int (*get_print_func(char c))(char *);
 int print_string(char *str);
+int print_single(char *n);
+int _atoi(char *s);
+int _strcmp(char *s1, char *s2);
+int _strlen_recursion(char *s);
 #endif
