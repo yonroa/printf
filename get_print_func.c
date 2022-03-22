@@ -7,9 +7,7 @@
  * NULL if the character is not found
  */
 int (*get_print_func(char c))(va_list)
-{
-    int result;
-    
+{    
 	struc pri[] = {
 		{"c", print_single},
 		{"s", print_string},
