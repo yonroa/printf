@@ -67,6 +67,12 @@ int print_string(va_list args)
 	return (sum);
 }
 
+/**
+ * @print_single - this is print
+ * @args: this is args
+ * Return: sum
+ */
+
 int print_single(va_list args)
 {
 	int n = va_arg(args, int);
@@ -74,6 +80,11 @@ int print_single(va_list args)
 	return (_putchar(n));
 }
 
+/**
+ * print_int - this is print int
+ * @args: this is args funtion
+ * Return: sum
+ */
 int print_int(va_list args)
 {
     int n = va_arg(args, int);

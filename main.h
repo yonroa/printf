@@ -5,7 +5,7 @@
 #include <stdio.h>
 /**
  * struct prints - Struct prints
- * @op: The operator
+ * @format: The operator
  * @f: The function associated
  */
 typedef struct prints

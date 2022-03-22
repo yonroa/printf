@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- *  * _strlen_recursion - Returns the lenght of a string
- *   * @s: String to be checked
- *    *
- *     * Return: The lenght of s
- *      */
+ * _strlen_recursion - Returns the lenght of a string
+ * @s: String to be checked
+ * Return: The lenght of s
+ */
 int _strlen_recursion(char *s)
 {
 	if (!*s || !s)
@@ -14,14 +13,13 @@ int _strlen_recursion(char *s)
 }
 
 /**
- *  * _strcmp - Compares two strings
- *   * @s1: String 1
- *    * @s2: String 2
- *     *
- *      * Return: A positive value if s1 > s2
- *       * A negative value if s1 < s2
- *        *  0 if s1 = s2
- *         */
+ * _strcmp - Compares two strings
+ * @s1: String 1
+ * @s2: String 2
+ * Return: A positive value if s1 > s2
+ * A negative value if s1 < s2
+ * 0 if s1 = s2
+ */
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
@@ -38,12 +36,10 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- *  * _atoi - Print the numbers of the string
- *   * @s: String to be printed
- *    *
- *     * Return: 0 if the string don't have numbers
- *      * sum if it does
- *       */
+ * _atoi - Print the numbers of the string
+ * @s: String to be printed
+ * Return: 0 if the string don't have numbers
+ */
 int _atoi(char *s)
 {
 	int i = 0;
