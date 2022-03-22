@@ -8,7 +8,7 @@
 
 /**
  * struct prints - Struct prints
- * @format: The operator
+ * @formt: The operator
  * @f: The function associated
  */
 typedef struct prints
@@ -28,3 +28,4 @@ int _strlen_recursion(char *s);
 void print_number(int n);
 int count_digit(int i);
 #endif
+
