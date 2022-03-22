@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * _printf - A function to print
  * @format: Format to print
@@ -8,10 +9,10 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, tmp;
+	int i = 0;
 	int sum = 0;
-	char *str;
-	int (*result)(char *);
+	int tmp;
+	int (*result)(va_list);
 	
 	va_start(args, format);
 	while (format[i])
@@ -22,15 +23,22 @@ int _printf(const char *format, ...)
 			sum++;
 		}
 		else
-		{
-			str = va_arg(args, char *);
-			result = get_print_func(format[i + 1]);
-			tmp = result(str);
-			sum += tmp;
-			i++;
+		{   
+		    result = get_print_func(format[i + 1]);
+		    tmp = result(args);
+		    if (!tmp)
+		        printf("ERROR");
+		 
+		   if (format[i + 1] == '%')
+		   {
+                _putchar('%');
+		   }
+		    sum += tmp;
+		    i++;
 		}
-		i++;
+	    i++;
 	}
 	va_end(args);
 	return (sum);
 }
+

@@ -1,23 +1,50 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdio.h>
 
 /**
- * * print_number - prints # using _putchar function
- * * @n: the integer to print
- * *
- * * Return: void
- * */
-int print_number(char *n)
+ * count_digit - returns the number of digits in an integer
+ * for _printf
+ * @i: integer to evaluate
+ * Return: number of digits
+ */
+int count_digit(int i)
 {
-	int i = 0, sum = 0;
+	unsigned int d = 0;
+	unsigned int u;
 
-	while (n[i] != '\0')
+	if (i < 0)
+		u = i * -1;
+	else
+		u = i;
+	while (u != 0)
 	{
-		_putchar(n[i]);
-		sum++;
-		i++;
+		u /= 10;
+		d++;
 	}
-	return (sum);
+	return (d);
+}
+
+/**
+ * print_number - helper function that loops through
+ * an integer and prints all its digits
+ * @n: integer to be printed
+ */
+void print_number(int n)
+{
+	unsigned int n1;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n1 = -n;
+	}
+	else
+		n1 = n;
+
+	if (n1 / 10)
+		print_number(n1 / 10);
+	_putchar((n1 % 10) + '0');
 }
 
 /**
@@ -25,11 +52,12 @@ int print_number(char *n)
  * @str: String to be printed
  * Return: sum
  */
-int print_string(char *str)
+int print_string(va_list args)
 {
 	int h = 0;
 	int sum = 0;
-
+    char *str = va_arg(args, char *);
+    
 	while (str[h] != '\0')
 	{
 		_putchar(str[h]);
@@ -39,9 +67,21 @@ int print_string(char *str)
 	return (sum);
 }
 
-int print_single(char *c)
+int print_single(va_list args)
 {
-	char n = c[0];
+	int n = va_arg(args, int);
 
 	return (_putchar(n));
+}
+
+int print_int(va_list args)
+{
+    int n = va_arg(args, int);
+    int sum = count_digit(n);
+    
+    if (n <= 0)
+        sum++;
+        
+    print_number(n);
+    return(sum);
 }
