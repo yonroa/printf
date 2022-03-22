@@ -48,15 +48,15 @@ void print_number(int n)
 
 /**
  * print_string - Prints the string str
- * @str: String to be printed
+ * @args: String to be printed
  * Return: sum
  */
 int print_string(va_list args)
 {
 	int h = 0;
 	int sum = 0;
-    char *str = va_arg(args, char *);
-    
+	char *str = va_arg(args, char *);
+
 	while (str[h] != '\0')
 	{
 		_putchar(str[h]);
@@ -67,7 +67,7 @@ int print_string(va_list args)
 }
 
 /**
- * @print_single - this is print
+ * print_single - this is print
  * @args: this is args
  * Return: sum
  */
@@ -86,12 +86,11 @@ int print_single(va_list args)
  */
 int print_int(va_list args)
 {
-    int n = va_arg(args, int);
-    int sum = count_digit(n);
-    
-    if (n <= 0)
-        sum++;
-        
-    print_number(n);
-    return(sum);
+	int n = va_arg(args, int);
+	int sum = count_digit(n);
+
+	if (n <= 0)
+	sum++;
+		print_number(n);
+	return (sum);
 }

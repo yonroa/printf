@@ -2,7 +2,7 @@
 
 /**
  * _printf - A function to print
- * format: Format to print
+ * @format: Format to print
  * Return: Lenght of the string
  */
 
@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 	int (*result)(va_list);
 
 	va_start(args, format);
+
 	while (format[i])
 	{
 		if (format[i] != '%')
@@ -26,17 +27,18 @@ int _printf(const char *format, ...)
 		{
 		    result = get_print_func(format[i + 1]);
 		    tmp = result(args);
-		    if (!tmp)
-		        printf("ERROR");
 
-		   if (format[i + 1] == '%')
-		   {
-                _putchar('%');
-		   }
-		    sum += tmp;
-		    i++;
+		if (!tmp)
+			printf("ERROR");
+
+		if (format[i + 1] == '%')
+		{
+			_putchar('%');
 		}
-	    i++;
+		sum += tmp;
+		i++;
+		}
+		i++;
 	}
 	va_end(args);
 	return (sum);
