@@ -7,7 +7,7 @@
 #include <string.h>
 
 /**
- * struct prints - Struct prints
+ * struct prints - Struct printss
  * @formt: The operator
  * @f: The function associated
  */

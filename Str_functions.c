@@ -36,7 +36,7 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _atoi - Print the numbers of the string
+ * _atoi - Print the numbers of the stringg
  * @s: String to be printed
  * Return: 0 if the string don't have numbers
  */

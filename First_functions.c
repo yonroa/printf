@@ -4,7 +4,7 @@
 /**
  * count_digit - returns the number of digits in an integer
  * for _printf
- * @i: integer to evaluate
+ * @i: integer to evaluaate
  * Return: number of digits
  */
 int count_digit(int i)
