@@ -13,9 +13,16 @@ int (*get_print_func(char c))(va_list)
 		{"d", print_int},
 		{"i", print_int},
 		{"%", print_percent},
+		{"b", print_binary},
+		{"u", print_unsigned},
+		{"o", print_octal},
+		{"x", print_Lowerhex},
+		{"X", print_Upperhex},
+		{"p", print_addr},
+		{"r", print_rev},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
-
 	int i = 0;
 	char *x = &c;
 
