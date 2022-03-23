@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				result = get_print_func(format[i + 1]);
-		    		tmp = result(args);
+				tmp = result(args);
 
 				if (tmp == 0)
 					printf("ERROR");
