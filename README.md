@@ -10,7 +10,7 @@ The function  **printf**  (which derives its name from  **“_print formatted_�
 
 `printf` is a special function because it receives a variable number of parameters. The first parameter is fixed and is the format string. It includes text to be printed. So,  `printf`  is called with as many parameters as marks in the format string plus one (the format string itself). The following example shows how the printed.
 
-[link](http://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_example_es.png)
+![link](http://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_example_es.png)
 
 The symbol `"%"` denotes the beginning of the format mark. The mark `"%s"` is replaced by the value of the variable `red` and the resulting string is printed. The symbol “`\n`” represents a line break. The output, by default, is justified to the right of the total width that we have given to the field, which by default has the length of the string as its length.
 
