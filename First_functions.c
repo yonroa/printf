@@ -57,6 +57,9 @@ int print_string(va_list args)
 	int sum = 0;
 	char *str = va_arg(args, char *);
 
+	if (!str)
+		str = "Error";
+
 	while (str[h] != '\0')
 	{
 		_putchar(str[h]);
@@ -76,7 +79,8 @@ int print_single(va_list args)
 {
 	int n = va_arg(args, int);
 
-	return (_putchar(n));
+	_putchar(n);
+	return (1);
 }
 
 /**
