@@ -27,5 +27,6 @@ int _strcmp(char *s1, char *s2);
 int _strlen_recursion(char *s);
 void print_number(int n);
 int count_digit(int i);
+int _puts(char *str);
 #endif
 
