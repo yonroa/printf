@@ -26,8 +26,7 @@ int _puts(char *str)
 
 /**
  * print_percent - prints a percent
- * @l: va_list arguments from _printf
- * @f: pointer to the struct flags in which we turn the flags on
+ * @args: va_list arguments from _printf
  * Return: number of char printed
  */
 int print_percent(va_list args)

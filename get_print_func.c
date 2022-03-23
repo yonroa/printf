@@ -25,5 +25,5 @@ int (*get_print_func(char c))(va_list)
 			return (pri[i].f);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -16,7 +16,12 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	while (format && format[i] != '\0')
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format [0] == '%' && format [1] == ' ' && !format[2])
+		return (-1);
+
+	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
 		{
@@ -32,10 +37,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				result = get_print_func(format[i + 1]);
-				tmp = result(args);
-
-				if (tmp == 0)
-					printf("ERROR");
+				tmp = (result) ? result(args) : _printf("%%%c", format[i + 1]);
 				sum += tmp;
 			}
 			i++;
