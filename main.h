@@ -17,6 +17,7 @@ typedef struct prints
 	int (*f)(va_list);
 } struc;
 int _putchar(char c);
+int print_percent(va_list);
 int _printf(const char *format, ...);
 int print_int(va_list);
 int (*get_print_func(char c))(va_list);

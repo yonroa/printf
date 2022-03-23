@@ -23,3 +23,15 @@ int _puts(char *str)
 		_putchar(str[i]);
 	return (i);
 }
+
+/**
+ * print_percent - prints a percent
+ * @l: va_list arguments from _printf
+ * @f: pointer to the struct flags in which we turn the flags on
+ * Return: number of char printed
+ */
+int print_percent(va_list args)
+{
+	(void)args;
+	return (_putchar('%'));
+}
