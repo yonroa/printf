@@ -61,7 +61,8 @@ Handle the following conversion specifiers:
 -   You don’t have to handle field width
 -   You don’t have to handle precision
 -   You don’t have to handle the length modifiers
-- 
+
+
 ### 2. Just because it's in print doesn't mean it's the gospel
 
 - Create a man page for your function.
