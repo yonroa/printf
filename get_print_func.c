@@ -12,9 +12,18 @@ int (*get_print_func(char c))(va_list)
 		{"s", print_string},
 		{"d", print_int},
 		{"i", print_int},
+		{"%", print_percent},
+		{"b", print_binary},
+		{"u", print_unsigned},
+		{"o", print_octal},
+		{"x", print_Lowerhex},
+		{"X", print_Upperhex},
+		{"p", print_addr},
+		{"r", print_rev},
+		{"R", print_rot13},
+		{"S", print_S},
 		{NULL, NULL}
 	};
-
 	int i = 0;
 	char *x = &c;
 
@@ -24,5 +33,5 @@ int (*get_print_func(char c))(va_list)
 			return (pri[i].f);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

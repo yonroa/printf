@@ -53,17 +53,12 @@ void print_number(int n)
  */
 int print_string(va_list args)
 {
-	int h = 0;
-	int sum = 0;
 	char *str = va_arg(args, char *);
 
-	while (str[h] != '\0')
-	{
-		_putchar(str[h]);
-		sum++;
-		h++;
-	}
-	return (sum);
+	if (!str)
+		str = "(null)";
+
+	return (_puts(str));
 }
 
 /**
@@ -76,7 +71,8 @@ int print_single(va_list args)
 {
 	int n = va_arg(args, int);
 
-	return (_putchar(n));
+	_putchar(n);
+	return (1);
 }
 
 /**
