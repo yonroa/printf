@@ -7,13 +7,13 @@
  */
 int _putchar(char c)
 {
-	char buf[1024];
-	int i;
+	static char buf[1024];
+	static int i;
 
 	if (c == -1 || i >= 1024)
 	{
 		write(1, &buf, i);
-		i = 0
+		i = 0;
 	}
 	if (c != -1)
 	{
