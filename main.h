@@ -25,6 +25,7 @@ int print_Lowerhex(va_list args);
 int print_addr(va_list args);
 int print_rev(va_list args);
 int print_rot13(va_list args);
+int print_S(va_list args);
 char *convert(unsigned long int num, int base, int lowercase);
 int print_percent(va_list);
 int _printf(const char *format, ...);

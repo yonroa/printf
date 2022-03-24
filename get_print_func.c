@@ -21,6 +21,7 @@ int (*get_print_func(char c))(va_list)
 		{"p", print_addr},
 		{"r", print_rev},
 		{"R", print_rot13},
+		{"S", print_S},
 		{NULL, NULL}
 	};
 	int i = 0;

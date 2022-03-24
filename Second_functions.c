@@ -65,3 +65,35 @@ int print_rot13(va_list args)
 	}
 	return (h);
 }
+
+/**
+ * print_S - Print just numbers and letters
+ * the others are printed by the code ASCII in
+ * Hexadecimal(Uppercase)
+ * @args: va_list arguments from _printf
+ * Return: Number of chars printed
+ */
+int print_S(va_list args)
+{
+	int i, count = 0;
+	char *num;
+	char *str = va_arg(args, char *);
+
+	if (!str)
+		return (_puts("(null)"));
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
+		{
+			_puts("\\x");
+			count += 2;
+			num = convert(str[i], 16, 0);
+			if (!num[1])
+			count += _putchar('0');
+			count += _puts(num);
+		}
+		else
+			count += _putchar(str[i]);
+	}
+	return (count);
+}
