@@ -1,0 +1,76 @@
+.TH man_3_printf "Cohorte 17 Holberton School" 24/03/2022.
+
+.SH NAME
+.B _printf - This is an alternate version.
+
+.SH SYNOPSIS
+.br
+.B #include "main.h"
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+.br
+.B _printf()
+- Prints to standard output
+
+.br
+.B c
+- It is a character that is printed in the string.
+
+.br
+.B s
+- It is a string that is printed.
+
+.br
+.B %
+- The percent symbol is the character that lets the function know that the specifier will make changes to print the format.
+
+.br
+.B d
+- This allows a decimal number to be the data type to be added to our output string.
+
+.br
+.B i
+- Indicates that it is an integer to be added to the output of the string.
+
+.br
+.B b
+- Indicates that an integer will be converted to binary.
+
+.br
+.B u
+- Indicates an unsigned int argument is converted to unsigned decimal.
+
+.br
+.B o
+- Indicates an unsigned int argument is converted to unsigned octal.
+
+.br
+.B x
+- Indicates an unsigned int argument is converted to unsigned lowercase hexadecimal.
+
+.br
+.B X
+- Indicates an unsigned int argument is converted to uppercase unsigned hexadecimal.
+
+.br
+.B p
+- Address printed in hexadecimal
+
+.br
+.B S
+- Print a string. Non-printable characters are printed as "\x" followed by their ASCII values in two-digit hexadecimal format
+
+.br
+.B r
+- This allows prints the reversed string.
+
+.br
+.B R
+- This allows prints the rot13'ed string.
+
+.SH BUGS
+.B No BUGS
+
+.SH AUTHORS
+.B Written by Yon Roa and Victor Uroza, Holberton Colombia Cohort 17, March 2022.
