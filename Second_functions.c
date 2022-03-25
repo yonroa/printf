@@ -41,7 +41,7 @@ int print_rev(va_list args)
 /**
  * print_rot13 - Prints a string in rot13
  * @args: va_list arguments from _printf
- * Return: Number of chars to be printed
+ * Return: Number of chars printed
  */
 int print_rot13(va_list args)
 {
