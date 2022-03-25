@@ -78,7 +78,7 @@ int print_single(va_list args)
 /**
  * print_int - this is print int
  * @args: this is args funtion
- * Return: sum
+ * Return: Number of chars printed
  */
 int print_int(va_list args)
 {
