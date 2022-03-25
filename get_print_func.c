@@ -3,7 +3,7 @@
 /**
  * get_print_func - Select the correct format to print
  * @c: Character to be compareed
- * Return: NULL
+ * Return: NULL if there is not matches
  */
 int (*get_print_func(char c))(va_list)
 {
